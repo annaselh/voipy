@@ -1,16 +1,26 @@
 from dataclasses import dataclass
 
+class CallEvent:
+    pass
 
 @dataclass
-class CallStarted:
+class CallStarted(CallEvent):
     channel_id: str
     caller: str | None = None
 
 @dataclass
-class CallEnded:
+class CallEnded(CallEvent):
     channel_id: str
     reason: str | None = None
 
 @dataclass
-class SpeechStarted:
+class DtmfReceived(CallEvent):
+    channel_id: str
+    digit: str
+
+class ProviderEvent:
+    pass
+
+@dataclass
+class SpeechStarted(ProviderEvent):
     session_id: str
