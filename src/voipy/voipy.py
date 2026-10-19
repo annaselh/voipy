@@ -1,5 +1,3 @@
-
-
 class Voipy:
-    def __construct(self):
+    def __init__(self) -> None:
         pass

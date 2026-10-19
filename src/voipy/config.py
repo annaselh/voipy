@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 
+
 @dataclass
 class VoipyConfig:
     provider: str = "openai"
