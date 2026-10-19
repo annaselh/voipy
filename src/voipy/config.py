@@ -1,7 +1,10 @@
 from dataclasses import dataclass
 
+from .core.audio import AudioCodec
+
+
 @dataclass
 class VoipyConfig:
-    provider: str = "openai"
     connect_timeout: float = 10.0
-    audio_codec: str = "ulaw"
+    audio_codec: str = AudioCodec.ULAW
+    sample_rate: int = 8000

@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from enum import StrEnum
+
 from .exceptions import SessionStateError
+
 
 class SessionState(StrEnum):
     CREATED = "created"
@@ -9,6 +11,7 @@ class SessionState(StrEnum):
     CLOSED = "closed"
     FAILED = "failed"
 
+
 _ALLOWED = {
     SessionState.CREATED: {SessionState.CONNECTING, SessionState.CLOSED},
     SessionState.CONNECTING: {SessionState.ACTIVE, SessionState.FAILED, SessionState.CLOSED},
@@ -16,6 +19,8 @@ _ALLOWED = {
     SessionState.FAILED: {SessionState.CLOSED},
     SessionState.CLOSED: set(),
 }
+
+
 @dataclass
 class VoiceSession:
     session_id: str

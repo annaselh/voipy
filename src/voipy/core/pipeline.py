@@ -1,8 +1,11 @@
+from .interface import MediaTransport, VoiceProvider
+
+
 class AudioPipeline:
     # provider/media_transport get real Protocol types in the next phase.
-    def __init__(self, provider: object, media_transport: object) -> None:
+    def __init__(self, provider: VoiceProvider, transport: MediaTransport) -> None:
         self.provider = provider
-        self.media_transport = media_transport
+        self.transport = transport
 
     async def start(self) -> None:
         # Connect provider and media transport

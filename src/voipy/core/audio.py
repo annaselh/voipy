@@ -1,10 +1,12 @@
 from dataclasses import dataclass
-from enum import Enum
+from enum import StrEnum
 
-class AudioCodec(str, Enum):
+
+class AudioCodec(StrEnum):
     ULAW = "ulaw"
     ALAW = "alaw"
     PCM16 = "pcm16"
+
 
 @dataclass(frozen=True, slots=True)
 class AudioFrame:

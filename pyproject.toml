@@ -8,18 +8,6 @@ version = "0.1.0"
 description = "Python library for real-time AI voice integration"
 readme = "README.md"
 requires-python = ">=3.11"
-<<<<<<< HEAD
-license = "MIT"
-dependencies = []
-
-[project.optional-dependencies]
-asterisk = ["httpx>=0.27", "websockets>=13"]
-freeswitch = []
-openai = ["websockets>=13"]
-dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.6", "mypy>=.11"]
-
-[tool.hatch.build.target.wheel]
-=======
 dependencies = []
 
 [project.optional-dependencies]
@@ -28,29 +16,19 @@ openai = []
 dev = ["pytest>=8", "pytest-asyncio>=0.24", "ruff>=0.6", "mypy>=1.11"]
 
 [tool.hatch.build.targets.wheel]
->>>>>>> 308dcfec70baa02d7b62af57cce33e8718d90f4d
 packages = ["src/voipy"]
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 308dcfec70baa02d7b62af57cce33e8718d90f4d
 [tool.ruff]
 line-length = 100
 target-version = "py311"
 
-<<<<<<< HEAD
-[tool.mypy]
-strict = true
-=======
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "UP", "B"]
 
 [tool.mypy]
 strict = true
 files = ["src"]
->>>>>>> 308dcfec70baa02d7b62af57cce33e8718d90f4d
