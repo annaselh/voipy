@@ -1,0 +1,16 @@
+[build-system]
+requries = ["hatchling"]
+build-backend = "hatchling.backend"
+
+[project]
+name = "voipy"
+version = "0.1.0"
+description = "Python library for real-time AI voice integration"
+requries-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+asterisk = []
+freeswitch = []
+openai = []
+dev = ["pytest", "pytest-asyncio", "ruff"]
