@@ -1,0 +1,13 @@
+from typing import Protocol
+
+class TelephonyAdapter(Protocol):
+
+    async def answer(self, channel_id: str) -> None:
+        ...
+
+    async def hangup(self, channel_id: str) -> None:
+        ...
+
+    async def transfer(self, channel_id: str, destination: str) -> None:
+        ...
+
