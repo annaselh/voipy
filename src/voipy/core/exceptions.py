@@ -1,12 +1,5 @@
-
-class VoipyError(Exception):
-    pass
-
-class TelephonyError(Exception):
-    pass
-
-class ProviderError(Exception):
-    pass
-
-class AudioError(Exception):
-    pass
+class VoipyError(Exception): ...
+class TelephonyError(VoipyError): ...
+class ProviderError(VoipyError): ...
+class AudioError(VoipyError): ...
+class SessionStateError(VoipyError): ...
