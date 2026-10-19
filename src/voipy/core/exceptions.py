@@ -1,12 +1,18 @@
-
 class VoipyError(Exception):
+    """Base class for all voipy errors."""
+
+
+class TelephonyError(VoipyError):
     pass
 
-class TelephonyError(Exception):
+
+class ProviderError(VoipyError):
     pass
 
-class ProviderError(Exception):
+
+class AudioError(VoipyError):
     pass
 
-class AudioError(Exception):
+
+class SessionStateError(VoipyError):
     pass

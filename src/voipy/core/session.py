@@ -1,7 +1,8 @@
 from dataclasses import dataclass
-from enum import Enum
+from enum import StrEnum
 
-class SessionState(str, Enum):
+
+class SessionState(StrEnum):
     CREATED = "created"
     CONNECTING = "connecting"
     ACTIVE = "active"
