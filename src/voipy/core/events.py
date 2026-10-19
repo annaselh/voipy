@@ -5,7 +5,7 @@ from typing import Literal
 from .audio import AudioFrame
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass(frozen=True, kw_only=True)
 class Event:
     timestamp: float = field(default_factory=time.monotonic)
 
